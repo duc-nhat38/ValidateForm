@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create user</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mobile.css">
+</head>
+
+<body>
+    <div class="container">
+        <h3>CREATE USER</h3>
+        <form id="formCreate">
+            <div class="form_left">
+                <div class="form_control">
+                    <label for="name">Name :</label>
+                    <input type="text" name="name" id="name" placeholder="Input name ..." data-rule-required="true"
+                        data-msg-required="Tên không được để trống." data-rule-minlength="12"
+                        data-msg-minlength="Tên không được ít hơn 12 ký tự." data-rule-maxlength="100"
+                        data-msg-maxlength="Tên không được nhiều hơn 100 ký tự." /><br />
+                </div>
+                <div class="form_control">
+                    <label for="email">Email :</label>
+                    <input type="email" name="email" id="email" placeholder="Input email ..." data-rule-required="true"
+                        data-msg-required="Email không được để trống." data-rule-email="true"
+                        data-msg-email="Email không đúng định dạng." /><br />
+                </div>
+                <div class="form_control">
+                    <label for="phone">Phone :</label>
+                    <input type="text" name="phone" id="phone" placeholder="Input phone ..." data-rule-required="true"
+                        data-msg-required="Số điện thoại không được để trống." data-rule-number="true"
+                        data-msg-number="Vui lòng nhập chữ số ." data-rule-minlength="10"
+                        data-msg-minlength="Số điện thoại không được ít hơn 10 ký tự." data-rule-maxlength="10"
+                        data-msg-maxlength="Số điện thoại không được nhiều hơn 10 ký tự." /><br />
+                </div>
+                <div class="form_control file">
+                    <label for="">Avatar :</label>
+                    <label for="avatar" class="avatar">Choose</label>
+                    <input type="file" name="avatar" id="avatar" placeholder="Input file ..." accept="image/*"
+                        onchange="changAvatar(this);validAvatar()" hidden /><br />
+                    <span class="error" id="msg_error">Avatar không được để trống.</span>
+                </div>
+                <div class="avatarBottom" hidden>
+                    <img src="images/avatar.png" alt="" class="showAvatar">
+                </div>
+                <button type="button" onclick="create()">CREATE</button>
+            </div>
+            <div class="form_right">
+                <img src="images/avatar.png" alt="" class="showAvatar">
+            </div>
+        </form>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"></script>
+    <script src="javascript.js"></script>
+</body>
+
+</html>

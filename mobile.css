@@ -1,0 +1,53 @@
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 15px;
+    }
+    .form_right img {
+        height: 185px;
+        margin-top: 12%;
+    }
+    form input {
+        font-size: 15px;
+    }
+    form button {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .container h3 {
+        font-size: 22px;
+    }
+    .form_right{
+        display: none;
+    }
+    .form_left {
+        width: 100%;
+        border: none;
+    }
+    .avatarBottom {
+        display: block;
+    }
+    .avatarBottom img {
+        width: 70%;
+        margin: 0 15%;
+        height: 145px;
+    }
+}
+@media screen and (max-width: 375px) {
+    body {
+        font-size: 13px;
+    }
+    form input {
+        font-size: 13px;
+    }
+    form button {
+        font-size: 13px;
+    }
+    .container h3 {
+        font-size: 20px;
+    }
+    form input {
+        height: 30px;
+    }
+}
